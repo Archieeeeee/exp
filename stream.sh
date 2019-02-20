@@ -18,6 +18,9 @@
 # Download best format available but not better that 480p
 # youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
 
+# 720p and mp4
+# youtube-dl -f 'bestvideo[ext=mp4,height<=720]+bestaudio[ext=m4a]/best[height<=720]' 
+
 # Download best video only format but no bigger than 50 MB
 # youtube-dl -f 'best[filesize<50M]'
 
