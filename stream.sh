@@ -8,6 +8,10 @@
  #use original codec 
  ffmpeg -re -i j20.mp4 -c copy -f flv "rtmp://ps3.live.panda.tv/live_panda/dcb9e0e8fd6bd0aefefe6480c7248fda?sign=0b573a5e9e8cc90e71e6c7794f28f143&time=1550645170&wm=2&wml=1&extra=0"
 
+#image and audio to mp4
+ffmpeg -loop 1 -framerate 25 -i jinx.jpg -i music.mp3 -c:v libx264 -s 1280x720 -crf 0 -strict -2 -c:a aac -shortest out.mp4
+
+#if frame rate too low,Panda.TV wont show the video
 
 
 
