@@ -16,6 +16,9 @@ ffmpeg -loop 1 -framerate 25 -i jinx.jpg -i music.mp3 -c:v libx264 -s 1280x720 -
 #image directly to stream
 ffmpeg -re -loop 1 -framerate 25 -i jinx.jpg -i music.mp3 -c:v libx264 -s 1280x720 -crf 0 -strict -2 -c:a aac -shortest -f flv "rtmp://ps3.live.panda.tv/live_panda/dcb9e0e8fd6bd0aefefe6480c7248fda?sign=1ffce67eb24edc4677af2daf618fdfa9&time=1550654886&wm=2&wml=1&extra=0"
 
+#all files in the directory
+for i in *.mp4; do ffmpeg -re -i $i -c copy -f flv "rtmp://qn.live-send.acg.tv/live-qn/?streamname=live_258376025_4325437&key=558a5de550ccf93af8e1a0448a9287d4"; done;
+
 
 
 #https://github.com/rg3/youtube-dl/blob/master/README.md#readme
