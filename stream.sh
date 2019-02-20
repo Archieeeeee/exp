@@ -30,6 +30,7 @@ for i in *.mp4; do ffmpeg -re -i $i -c copy -f flv "rtmp://qn.live-send.acg.tv/l
 
 # 720p and mp4
 # youtube-dl -f 'bestvideo[ext=mp4,height<=720]+bestaudio[ext=m4a]/best[height<=720]' 
+# youtube-dl -f 'bestvideo[ext=mp4,height<=1080]+bestaudio[ext=m4a]/best[height<=1080]' https://www.youtube.com/watch?v=K-l4P1qYnhk
 
 # Download best video only format but no bigger than 50 MB
 # youtube-dl -f 'best[filesize<50M]'
